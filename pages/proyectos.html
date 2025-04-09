@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | Scape Pixel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff3e6c',
+                        secondary: '#4169e1',
+                        dark: '#0a0a0a',
+                    },
+                    fontFamily: {
+                        'jersey': ['"Jersey 15"', 'sans-serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body class="bg-dark text-white overflow-x-hidden font-sans">
+    <!-- Header -->
+    <div class="container mx-auto max-w-7xl px-4">
+        <header class="flex justify-between items-center py-10">
+            <a href="../index.html" class="text-4xl uppercase font-jersey">Scape Pixel</a>
+            <nav class="hidden md:block">
+                <ul class="flex text-lg">
+                    <li class="ml-8 relative group">
+                        <a href="servicios.html#servicios"
+                            class="text-white hover:text-primary transition-colors font-bold flex items-center">
+                            Servicios
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </a>
+                        <!-- Dropdown menu -->
+                        <div
+                            class="absolute left-0 mt-2 w-64 bg-black/90 border border-gray-800 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2 px-3 hover:bg-black/50 rounded-lg transition-colors">
+                                <a href="servicios.html#web-design" class="flex items-start gap-3">
+                                    <div class="bg-primary/20 p-2 rounded-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold">Web Design</div>
+                                        <div class="text-sm opacity-70">Diseño web atractivo y funcional</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="py-2 px-3 hover:bg-black/50 rounded-lg transition-colors mt-2">
+                                <a href="servicios.html#web-development" class="flex items-start gap-3">
+                                    <div class="bg-secondary/20 p-2 rounded-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold">Web Development</div>
+                                        <div class="text-sm opacity-70">Desarrollo con React y tecnologías modernas
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="py-2 px-3 hover:bg-black/50 rounded-lg transition-colors mt-2">
+                                <a href="servicios.html#ecommerce" class="flex items-start gap-3">
+                                    <div class="bg-primary/20 p-2 rounded-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold">E-commerce</div>
+                                        <div class="text-sm opacity-70">Tiendas online optimizadas para ventas</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mt-3 pt-3 border-t border-gray-800">
+                                <a href="servicios.html" class="text-primary text-sm flex items-center">
+                                    Ver todos los servicios
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="ml-8"><a href="proyectos.html"
+                            class="text-white hover:text-primary transition-colors font-bold">Proyectos</a></li>
+                    <li class="ml-8"><a href="nosotros.html"
+                            class="text-white hover:text-primary transition-colors font-bold border-r pr-4 py-2">Sobre
+                            Nosotros</a></li>
+                    <li class="ml-4"><a href="contacto.html"
+                            class="text-primary hover:text-primary transition-colors font-bold">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </header>
+        
+        <!-- Hero Section -->
+        <section class="py-20 md:py-32 relative">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl md:text-6xl font-bold mb-8 leading-tight">Nuestros Proyectos</h1>
+                <p class="text-xl mb-10 opacity-80 max-w-xl">Descubre cómo hemos ayudado a empresas a transformar sus ideas en soluciones digitales efectivas.</p>
+                
+                <!-- Filter buttons -->
+                <div class="flex flex-wrap gap-4">
+                    <button class="bg-primary text-white px-6 py-2 rounded-lg font-medium">Todos</button>
+                    <button class="bg-black/30 border border-gray-800 text-white px-6 py-2 rounded-lg font-medium hover:border-primary transition-colors">Diseño Web</button>
+                    <button class="bg-black/30 border border-gray-800 text-white px-6 py-2 rounded-lg font-medium hover:border-primary transition-colors">Desarrollo Web</button>
+                    <button class="bg-black/30 border border-gray-800 text-white px-6 py-2 rounded-lg font-medium hover:border-primary transition-colors">E-commerce</button>
+                </div>
+            </div>
+            
+            <!-- Decorative element -->
+            <div class="absolute top-1/2 right-0 -translate-y-1/2 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl"></div>
+        </section>
+        
+        <!-- Projects Grid -->
+        <section class="py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group">
+                    <div class="bg-black/30 border border-gray-800 rounded-xl overflow-hidden group-hover:border-primary transition-colors">
+                        <div class="relative aspect-video overflow-hidden">
+                            <img src="https://via.placeholder.com/600x400/1a1a1a/808080?text=Proyecto+1" alt="Proyecto 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                                <div class="p-6">
+                                    <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">Diseño Web</span>
+                                    <h3 class="text-xl font-bold mt-2">Rediseño Corporativo</h3>
+                                    <p class="opacity-80 mt-1">Renovación completa de la identidad digital para una empresa de tecnología.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-xl font-bold">Rediseño Corporativo</h3>
+                                <a href="#" class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="opacity-80 mt-2">Renovación completa de la identidad digital para una empresa de tecnología.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="group">
+                    <div class="bg-black/30 border border-gray-800 rounded-xl overflow-hidden group-hover:border-primary transition-colors">
+                        <div class="relative aspect-video overflow-hidden">
+                            <img src="https://via.placeholder.com/600x400/1a1a1a/808080?text=Proyecto+2" alt="Proyecto 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                                <div class="p-6">
+                                    <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">E-commerce</span>
+                                    <h3 class="text-xl font-bold mt-2">Tienda Online de Moda</h3>
+                                    <p class="opacity-80 mt-1">Plataforma de comercio electrónico para una marca de moda emergente.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-xl font-bold">Tienda Online de Moda</h3>
+                                <a href="#" class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="opacity-80 mt-2">Plataforma de comercio electrónico para una marca de moda emergente.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="group">
+                    <div class="bg-black/30 border border-gray-800 rounded-xl overflow-hidden group-hover:border-primary transition-colors">
+                        <div class="relative aspect-video overflow-hidden">
+                            <img src="https://via.placeholder.com/600x400/1a1a1a/808080?text=Proyecto+3" alt="Proyecto 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                                <div class="p-6">
+                                    <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">Desarrollo Web</span>
+                                    <h3 class="text-xl font-bold mt-2">Aplicación de Gestión</h3>
+                                    <p class="opacity-80 mt-1">Sistema de gestión interna para optimizar procesos empresariales.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-xl font-bold">Aplicación de Gestión</h3>
+                                <a href="#" class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="opacity-80 mt-2">Sistema de gestión interna para optimizar procesos empresariales.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="group">
+                    <div class="bg-black/30 border border-gray-800 rounded-xl overflow-hidden group-hover:border-primary transition-colors">
+                        <div class="relative aspect-video overflow-hidden">
+                            <img src="https://via.placeholder.com/600x400/1a1a1a/808080?text=Proyecto+4" alt="Proyecto 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                                <div class="p-6">
+                                    <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">Diseño Web</span>
+                                    <h3 class="text-xl font-bold mt-2">Portal Educativo</h3>
+                                    <p class="opacity-80 mt-1">Plataforma de aprendizaje online para una institución educativa.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-xl font-bold">Portal Educativo</h3>
+                                <a href="#" class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="opacity-80 mt-2">Plataforma de aprendizaje online para una institución educativa.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="group">
+                    <div class="bg-black/30 border border-gray-800 rounded-xl overflow-hidden group-hover:border-primary transition-colors">
+                        <div class="relative aspect-video overflow-hidden">
+                            <img src="https://via.placeholder.com/600x400/1a1a1a/808080?text=Proyecto+5" alt="Proyecto 5" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                                <div class="p-6">
+                                    <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">E-commerce</span>
+                                    <h3 class="text-xl font-bold mt-2">Marketplace de Productos</h3>
+                                    <p class="opacity-80 mt-1">Plataforma de venta online para múltiples vendedores.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-xl font-bold">Marketplace de Productos</h3>
+                                <a href="#" class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="opacity-80 mt-2">Plataforma de venta online para múltiples vendedores.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="group">
+                    <div class="bg-black/30 border border-gray-800 rounded-xl overflow-hidden group-hover:border-primary transition-colors">
+                        <div class="relative aspect-video overflow-hidden">
+                            <img src="https://via.placeholder.com/600x400/1a1a1a/808080?text=Proyecto+6" alt="Proyecto 6" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                                <div class="p-6">
+                                    <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">Desarrollo Web</span>
+                                    <h3 class="text-xl font-bold mt-2">App de Reservas</h3>
+                                    <p class="opacity-80 mt-1">Sistema de reservas online para un negocio de servicios.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-xl font-bold">App de Reservas</h3>
+                                <a href="#" class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="opacity-80 mt-2">Sistema de reservas online para un negocio de servicios.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="mt-16 text-center">
+                <button class="bg-black/30 border border-gray-800 text-white px-8 py-4 rounded-lg font-medium hover:border-primary transition-colors">
+                    Cargar más proyectos
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="py-20 border-t border-gray-800">
+            <div class="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-10 md:p-16 relative overflow-hidden">
+                <!-- Decorative elements -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
+                
+                <div class="max-w-3xl mx-auto text-center relative z-10">
+                    <h2 class="text-4xl font-bold mb-6">¿Listo para iniciar tu proyecto?</h2>
+                    <p class="text-xl opacity-80 mb-10">Contáctanos hoy mismo y convierte tu idea en una solución digital efectiva que impulse tu negocio.</p>
+                    <a href="contacto.html" class="bg-primary text-white font-bold py-4 px-8 rounded-lg hover:bg-primary/90 transition-colors inline-flex items-center">
+                        Contactar ahora
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-12">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <a href="index.html" class="text-3xl uppercase font-jersey">Scape Pixel</a>
+                    <p class="mt-2 opacity-70 max-w-md">Creamos soluciones web innovadoras que transforman tu visión en realidad digital.</p>
+                </div>
+                
+                <div class="flex flex-wrap gap-8">
+                    <div>
+                        <h3 class="font-bold mb-4">Enlaces rápidos</h3>
+                        <ul class="space-y-2 opacity-70">
+                            <li><a href="servicios.html" class="hover:text-primary transition-colors">Servicios</a></li>
+                            <li><a href="proyectos.html" class="hover:text-primary transition-colors">Proyectos</a></li>
+                            <li><a href="nosotros.html" class="hover:text-primary transition-colors">Sobre Nosotros</a></li>
+                            <li><a href="contacto.html" class="hover:text-primary transition-colors">Contacto</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-bold mb-4">Servicios</h3>
+                        <ul class="space-y-2 opacity-70">
+                            <li><a href="servicios.html#web-design" class="hover:text-primary transition-colors">Diseño Web</a></li>
+                            <li><a href="servicios.html#web-development" class="hover:text-primary transition-colors">Desarrollo Web</a></li>
+                            <li><a href="servicios.html#ecommerce" class="hover:text-primary transition-colors">E-commerce</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-bold mb-4">Contacto</h3>
+                        <ul class="space-y-2 opacity-70">
+                            <li>Armilla, Granada</li>
+                            <li>info@scapepixel.com</li>
+                            <li>+34 640 25 18 86</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="opacity-70 mb-4 md:mb-0">
+                    &copy; 2023 Scape Pixel. Todos los derechos reservados.
+                </div>
+                
+                <div class="flex gap-4">
+                    <a href="#" class="opacity-70 hover:opacity-100 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="opacity-70 hover:opacity-100 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="opacity-70 hover:opacity-100 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../src/js/main.js"></script>
+</body>
+</html>
